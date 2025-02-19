@@ -1,0 +1,56 @@
+/*Scenario 1*/
+/*switch sta1*/
+ovs-vsctl add-port sta1 vx1 -- set interface vx1 type=vxlan options:remote_ip=11.0.0.1
+/*switch sta2*/
+ovs-vsctl add-port sta2 vx3 -- set interface vx5 type=vxlan options:remote_ip=11.0.0.2
+/*switch uav1*/
+ovs-vsctl add-port uav1 vx1 -- set interface vx1 type=vxlan options:remote_ip=11.0.0.11 && ovs-vsctl add-port uav1 vx2 -- set interface vx2 type=vxlan options:remote_ip=11.0.0.2
+/*switch uav2*/
+ovs-vsctl add-port uav2 vx2 -- set interface vx2 type=vxlan options:remote_ip=11.0.0.1 && ovs-vsctl add-port uav2 vx3 -- set interface vx3 type=vxlan options:remote_ip=11.0.0.12
+
+
+/*Scenario 2*/
+/*switch sta1*/
+ovs-vsctl add-port sta1 vx1 -- set interface vx1 type=vxlan options:remote_ip=11.0.0.1
+/*switch sta2*/
+ovs-vsctl add-port sta2 vx4 -- set interface vx4 type=vxlan options:remote_ip=11.0.0.3
+/*switch uav1*/
+ovs-vsctl add-port uav1 vx1 -- set interface vx1 type=vxlan options:remote_ip=11.0.0.11 && ovs-vsctl add-port uav1 vx2 -- set interface vx2 type=vxlan options:remote_ip=11.0.0.2
+/*switch uav2*/
+ovs-vsctl add-port uav2 vx2 -- set interface vx2 type=vxlan options:remote_ip=11.0.0.1 && ovs-vsctl add-port uav2 vx3 -- set interface vx3 type=vxlan options:remote_ip=11.0.0.3
+/*switch uav3*/
+ovs-vsctl add-port uav3 vx3 -- set interface vx3 type=vxlan options:remote_ip=11.0.0.2 && ovs-vsctl add-port uav3 vx4 -- set interface vx4 type=vxlan options:remote_ip=11.0.0.12
+
+/*Scenario 3*/
+/*switch sta1*/
+ovs-vsctl add-port sta1 vx1 -- set interface vx1 type=vxlan options:remote_ip=11.0.0.1
+/*switch sta2*/
+ovs-vsctl add-port sta2 vx5 -- set interface vx5 type=vxlan options:remote_ip=11.0.0.4
+/*switch uav1*/
+ovs-vsctl add-port uav1 vx1 -- set interface vx1 type=vxlan options:remote_ip=11.0.0.11 && ovs-vsctl add-port uav1 vx2 -- set interface vx2 type=vxlan options:remote_ip=11.0.0.2
+/*switch uav2*/
+ovs-vsctl add-port uav2 vx2 -- set interface vx2 type=vxlan options:remote_ip=11.0.0.1 && ovs-vsctl add-port uav2 vx3 -- set interface vx3 type=vxlan options:remote_ip=11.0.0.3
+/*switch uav3*/
+ovs-vsctl add-port uav3 vx3 -- set interface vx3 type=vxlan options:remote_ip=11.0.0.2 && ovs-vsctl add-port uav3 vx4 -- set interface vx4 type=vxlan options:remote_ip=11.0.0.4
+/*switch uav4*/
+ovs-vsctl add-port uav4 vx4 -- set interface vx4 type=vxlan options:remote_ip=11.0.0.3 && ovs-vsctl add-port uav4 vx5 -- set interface vx5 type=vxlan options:remote_ip=11.0.0.12
+
+/*Scenario 4*/
+/*switch sta1*/
+ovs-vsctl add-port sta1 vx1 -- set interface vx1 type=vxlan options:remote_ip=11.0.0.1
+/*switch sta2*/
+ovs-vsctl add-port sta2 vx5 -- set interface vx5 type=vxlan options:remote_ip=11.0.0.4
+/*switch uav1*/
+ovs-vsctl add-port uav1 vx1 -- set interface vx1 type=vxlan options:remote_ip=11.0.0.11 && ovs-vsctl add-port uav1 vx2 -- set interface vx2 type=vxlan options:remote_ip=11.0.0.2 && ovs-vsctl add-port uav1 vx9 -- set interface vx9 type=vxlan options:remote_ip=11.0.0.7
+/*switch uav2*/
+ovs-vsctl add-port uav2 vx2 -- set interface vx2 type=vxlan options:remote_ip=11.0.0.1 && ovs-vsctl add-port uav2 vx3 -- set interface vx3 type=vxlan options:remote_ip=11.0.0.3
+/*switch uav3*/
+ovs-vsctl add-port uav3 vx3 -- set interface vx3 type=vxlan options:remote_ip=11.0.0.2 && ovs-vsctl add-port uav3 vx4 -- set interface vx4 type=vxlan options:remote_ip=11.0.0.4
+/*switch uav4*/
+ovs-vsctl add-port uav4 vx4 -- set interface vx4 type=vxlan options:remote_ip=11.0.0.3 && ovs-vsctl add-port uav4 vx5 -- set interface vx5 type=vxlan options:remote_ip=11.0.0.12 && ovs-vsctl add-port uav4 vx6 -- set interface vx6 type=vxlan options:remote_ip=11.0.0.5
+/*switch uav5*/
+ovs-vsctl add-port uav5 vx6 -- set interface vx6 type=vxlan options:remote_ip=11.0.0.4 && ovs-vsctl add-port uav5 vx7 -- set interface vx7 type=vxlan options:remote_ip=11.0.0.6
+/*switch uav6*/
+ovs-vsctl add-port uav6 vx7 -- set interface vx7 type=vxlan options:remote_ip=11.0.0.5 && ovs-vsctl add-port uav6 vx8 -- set interface vx8 type=vxlan options:remote_ip=11.0.0.7
+/*switch uav7*/
+ovs-vsctl add-port uav7 vx8 -- set interface vx8 type=vxlan options:remote_ip=11.0.0.6 && ovs-vsctl add-port uav7 vx9 -- set interface vx9 type=vxlan options:remote_ip=11.0.0.1

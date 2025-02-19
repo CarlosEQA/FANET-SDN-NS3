@@ -1,0 +1,49 @@
+/*Ogni scenario con un file diverso*/
+
+/*Scenario 1*/
+/*Le stazioni sono posizionatein: (25,60,0) e (106,125,0)*/
+$node_(0) set X_ 50.0
+$node_(0) set Y_ 88.0
+$node_(1) set X_ 75.0
+$node_(1) set Y_ 100.0
+
+/*Scenario 2*/
+/*Le stazioni sono ubicate in: (25,60,0) e (135,125,0)*/
+$node_(0) set X_ 50.0
+$node_(0) set Y_ 88.0
+$node_(1) set X_ 75.0
+$node_(1) set Y_ 100.0
+$node_(2) set X_ 100.0
+$node_(2) set Y_ 115.0
+
+/*Scenario 3*/
+/*Le stazioni sono posizionate in: (25,85,0) e (150,75,0)*/
+$node_(0) set X_ 50.0
+$node_(0) set Y_ 88.0
+$node_(1) set X_ 75.0
+$node_(1) set Y_ 100.0
+$node_(2) set X_ 100.0
+$node_(2) set Y_ 115.0
+$node_(3) set X_ 125.0
+$node_(3) set Y_ 100.0
+
+/*Scenario 4*/
+/*Le stazioni sono posizionate in: (25,85,0) e (165,120,0)*/
+$node_(0) set X_ 50.0
+$node_(0) set Y_ 100.0
+$node_(1) set X_ 75.0
+$node_(1) set Y_ 125.0
+$node_(2) set X_ 100.0
+$node_(2) set Y_ 140.0
+$node_(3) set X_ 135.0
+$node_(3) set Y_ 125.0
+$node_(4) set X_ 135.0
+$node_(4) set Y_ 90.0
+$node_(5) set X_ 100.0
+$node_(5) set Y_ 75.0
+$node_(6) set X_ 63.0
+$node_(6) set Y_ 73.0
+$ns_ at 20.000000000000 "$node_(5) setdest 50.0 100.0 5"
+$ns_ at 40.000000000000 "$node_(5) setdest 100.0 75.0 5"
+$ns_ at 70.000000000000 "$node_(2) setdest 6.0 6.0 5"
+$ns_ at 90.000000000000 "$node_(2) setdest 100.0 140.0 5"
